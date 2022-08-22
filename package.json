@@ -1,0 +1,11 @@
+{
+  "type": "commonjs",
+  "dependencies": {
+    "circular-json": "^0.5.9",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "envfile": "^6.17.0",
+    "fs": "^0.0.1-security",
+    "web3": "^1.7.5"
+  }
+}
