@@ -20,6 +20,23 @@ async function main() {
     console.log("\n Wallet Address (Main): " + walletAddress);
     console.log("\n Wallet Encrypted Private Key (Main): " + walletEncryptedPrivateKey);
 
+    // Need to encrypt company wallet's private key using new private key.pem file everytime new rsa key pair is generated
+//     let WALLET_PRIVATE_KEY = "0x9b70e0555e0925c45bf393f0181c4103083eb8d7980b018916e5e8006477b1a4";
+// // console.log("\n Private Key: " + WALLET_PRIVATE_KEY);
+
+// // encrypt Ebric user's private key using cryptographic public key
+// let encryptedPrivateKeytest = encryptionService.encryptPrivateKey(WALLET_PRIVATE_KEY) 
+// // encryptedText will be returned as Buffer
+// // in order to see it in more readble form, convert it to base64
+// // console.log('\n Encrypted Private Key: ', encryptedPrivateKey.toString('base64'))
+// let parsedFile = envfile.parse(sourcePath);
+//     parsedFile.COMPANY_WALLET_ADDRESS = "0xa361bB4047a21De67D1E60E015b5B0Ccf2B6a5dc";
+//     parsedFile.TOKEN_ID = "25";
+//     parsedFile.TOKEN_QUANTITY = "3";
+//     parsedFile.COMPANY_ENCRYPTED_PRIVATE_KEY = encryptedPrivateKeytest.toString('base64');
+
+//     fs.writeFileSync('./.env', envfile.stringify(parsedFile))
+
     // Decrypt private key function
     let encryptedPrivateKey = Buffer.from(walletEncryptedPrivateKey, 'base64');
     let decryptedPrivateKey = await decryptPrivateKey(encryptedPrivateKey);
